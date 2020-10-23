@@ -6,7 +6,14 @@ namespace Open_Lab_02._02
     {
         public void Format(double[] numbers)
         {
-            throw new NotImplementedException();
+            string[] number = new string[numbers.Length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                number[i] = numbers[i].ToString("#.##");
+            }
+            string output = string.Join(' ', number);
+            output = output.Replace(',', '.');
+            Console.WriteLine(output);
         }
     }
 }
